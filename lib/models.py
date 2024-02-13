@@ -33,4 +33,6 @@ class Customer(Base):
     last_name = Column(String())
 
     def __repr__(self):
-        return f'Customer: {self.name}'
+        return f'Customer: {self.id}'+\
+            f"Customer{self.name}"
+    
