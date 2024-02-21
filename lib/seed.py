@@ -3,12 +3,12 @@ from sqlalchemy.orm import sessionmaker
 from models import Base, Restaurant, Customer, Review
 
 
-engine = create_engine('sqlite:///db/restaurants.db')
+engine = create_engine('sqlite:///restaurants.db')
 Base.metadata.bind = engine
 
 
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+Session = sessionmaker(bind=engine)
+session = Session()
 
 
 Java = Restaurant(name='Java', price=3)
@@ -32,7 +32,7 @@ review2 = Review(star_rating=5, restaurant=CJs, customer=Kb)
 review3 = Review(star_rating=3, restaurant = The_law_steakhouse, customer=Rjo)
 
 session.add_all([review1, review2, review3])
-session.commit()
+session.commit
 
 
 session.close()

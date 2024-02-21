@@ -5,8 +5,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship,backref
 
 
+
+engine = create_engine('sqlite:///restaurants.db')
 Base = declarative_base()
-engine = create_engine('sqlite:///db/restaurants.db', echo=True)
 
 
 
